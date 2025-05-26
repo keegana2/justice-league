@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justice League - The Team</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="index-page">
+
+    <header>
+        <h1 class="title-text">Welcome to the Justice League</h1>
+    </header>
+
+    <div class="centered-image">
+        <img src="images/justice_league.jpg" alt="Justice League Team" width="500">
+    </div>
+
+	<div class="main-container">
+
+    <section>
+        <h2 class="header-text">What is the Justice League?</h2>
+        <p class="paragraph-text">
+            The Justice League is a legendary team of superheroes who come together to fight threats too big for any one hero to handle alone. 
+            Formed to protect the Earth and uphold justice, the League is made up of the world's greatest champions, working together for the good of all.
+        </p>
+
+        <h2 class="header-text">Meet the Heroes</h2>
+        <ul class="hero-links">
+            <li><a href="batman.html">Batman</a></li>
+            <li><a href="wonderwoman.html">Wonder Woman</a></li>
+            <li><a href="superman.html">Superman</a></li>
+            <li><a href="flash.html">Flash</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2 class="header-text">Famous Justice League Battles</h2>
+        <p class="paragraph-text">
+            Over the years, the Justice League has faced some of the greatest threats to Earth and beyond. Here are just a few of their most legendary showdowns:
+        </p>
+        <ul class="paragraph-text" style="text-align: left; list-style-type: disc;">
+        <li>
+            <strong>The Darkseid Invasion</strong> – The League's might was tested when Darkseid, ruler of Apokolips, launched an all-out invasion on Earth using his Parademon army. The battle stretched across cities and dimensions, ending only after the League fought their way to Darkseid himself and forced a retreat.
+        </li>
+        <li>
+            <strong>Crisis on Infinite Earths</strong> – When the multiverse was on the brink of collapse due to the Anti-Monitor's cosmic destruction, the Justice League joined forces with heroes from across parallel Earths. Sacrifices were made, realities merged, and the team’s legacy was rewritten in one of their most reality-shattering missions ever.
+        </li>
+        <li>
+            <strong>The Starro Incident</strong> – In their earliest team-up, the League faced a mind-controlling alien starfish, Starro the Conqueror, who seized control of an entire city. By combining their unique abilities and thinking strategically, the heroes saved the populace and marked their first victory as a team.
+        </li>
+        <li>
+            <strong>Doomsday War</strong> – After Superman fell in combat against the monstrous Doomsday, the rest of the League had to step in to prevent global devastation. This battle tested their resolve and unity as they defended Earth while mourning one of their strongest allies.
+        </li>
+    </ul>
+    </section>
+
+    <section>
+        <h2 class="header-text">Words from the League</h2>
+        <div class="paragraph-text" style="max-width: 800px; margin: 0 auto;">
+            <p><em>"I am vengeance. I am the night. I am Batman."</em> – Batman</p>
+            <p><em>"In a world of ordinary mortals, you are a wonder."</em> – Wonder Woman</p>
+            <p><em>"Dreams save us. Dreams lift us up and transform us."</em> – Superman</p>
+            <p><em>"Life doesn't give us purpose. We give life purpose."</em> – The Flash</p>
+        </div>
+    </section>
+
+<section id="quiz-section">
+  <h2>Justice League Quiz</h2>
+
+  <form id="quiz-form">
+
+    <div class="question">
+      <p>1. Who is the fastest member of the Justice League?</p>
+      <label><input type="radio" name="q1" value="superman"> Superman</label><br>
+      <label><input type="radio" name="q1" value="flash"> Flash</label><br>
+      <label><input type="radio" name="q1" value="batman"> Batman</label><br>
+      <label><input type="radio" name="q1" value="wonderwoman"> Wonder Woman</label><br>
+    </div>
+
+    <div class="question">
+      <p>2. Which hero is known as the Dark Knight?</p>
+      <label><input type="radio" name="q2" value="batman"> Batman</label><br>
+      <label><input type="radio" name="q2" value="superman"> Superman</label><br>
+      <label><input type="radio" name="q2" value="flash"> Flash</label><br>
+      <label><input type="radio" name="q2" value="wonderwoman"> Wonder Woman</label><br>
+    </div>
+
+    <div class="question">
+      <p>3. Which hero uses a lasso of truth?</p>
+      <label><input type="radio" name="q3" value="wonderwoman"> Wonder Woman</label><br>
+      <label><input type="radio" name="q3" value="batman"> Batman</label><br>
+      <label><input type="radio" name="q3" value="flash"> Flash</label><br>
+      <label><input type="radio" name="q3" value="superman"> Superman</label><br>
+    </div>
+
+    <div class="question">
+      <p>4. Who is from the planet Krypton?</p>
+      <label><input type="radio" name="q4" value="superman"> Superman</label><br>
+      <label><input type="radio" name="q4" value="flash"> Flash</label><br>
+      <label><input type="radio" name="q4" value="batman"> Batman</label><br>
+      <label><input type="radio" name="q4" value="wonderwoman"> Wonder Woman</label><br>
+    </div>
+
+    <button type="button" onclick="checkQuiz()" class="submit-btn">Submit Answers</button>
+  </form>
+
+  <p id="quiz-result"></p>
+</section>
+
+<section id="compatibility-section">
+  <h2>Hero Team-Up Compatibility Checker</h2>
+
+  <label for="hero1">Select Hero 1:</label>
+  <select id="hero1">
+    <option value="">--Choose a hero--</option>
+    <option value="batman">Batman</option>
+    <option value="superman">Superman</option>
+    <option value="flash">Flash</option>
+    <option value="wonderwoman">Wonder Woman</option>
+  </select>
+
+  <label for="hero2">Select Hero 2:</label>
+  <select id="hero2">
+    <option value="">--Choose a hero--</option>
+    <option value="batman">Batman</option>
+    <option value="superman">Superman</option>
+    <option value="flash">Flash</option>
+    <option value="wonderwoman">Wonder Woman</option>
+  </select>
+
+  <button class="submit-btn" onclick="checkCompatibility()">Check Compatibility</button>
+
+  <p id="compatibility-result" style="margin-top: 15px; font-weight: bold;"></p>
+</section>
+
+<section id="suggest-hero-section">
+  <h2>Suggest a Hero</h2>
+  <form id="hero-form">
+    <label for="hero-name">Hero Name:</label>
+    <input type="text" id="hero-name" name="hero-name" required>
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+  <p id="submit-response"></p>
+</section>
+
+
+
+</div>
+
+    <footer class="paragraph-text">
+        <p>Created by Andrew - 2025</p>
+    </footer>
+<script>
+function checkQuiz() {
+  const answers = {
+    q1: "flash",
+    q2: "batman",
+    q3: "wonderwoman",
+    q4: "superman"
+  };
+
+  let score = 0;
+  const total = Object.keys(answers).length;
+  const form = document.getElementById('quiz-form');
+  const result = document.getElementById('quiz-result');
+
+  for (const [question, correctAnswer] of Object.entries(answers)) {
+    const selected = form[question].value;
+    if (selected === correctAnswer) {
+      score++;
+    } else if (!selected) {
+      // If unanswered, treat as incorrect, or you can alert user to answer all
+      // For now just continue
+    }
+  }
+
+  result.textContent = `You got ${score} out of ${total} correct!`;
+  result.style.fontWeight = "bold";
+  result.style.marginTop = "10px";
+  if (score === total) {
+    result.style.color = "green";
+  } else {
+    result.style.color = "red";
+  }
+}
+
+function checkCompatibility() {
+  const hero1 = document.getElementById('hero1').value;
+  const hero2 = document.getElementById('hero2').value;
+  const result = document.getElementById('compatibility-result');
+
+  if (!hero1 || !hero2) {
+    result.textContent = "Please select two heroes.";
+    result.style.color = "red";
+    return;
+  }
+
+  if (hero1 === hero2) {
+    result.textContent = "Please select two different heroes.";
+    result.style.color = "red";
+    return;
+  }
+
+  const combos = {
+    "batman-superman": "Batman and Superman form a powerful duo combining intellect, strength, and leadership. Batman’s tactical mind complements Superman’s superhuman abilities, making them an unstoppable team.",
+    "batman-flash": "Batman and Flash work together with Batman’s planning and Flash’s speed, enabling quick responses and strategic maneuvers in any crisis.",
+    "batman-wonderwoman": "Batman and Wonder Woman balance each other with Batman’s human intelligence and Wonder Woman’s divine strength and compassion, creating a formidable partnership.",
+    "superman-flash": "Superman and Flash’s combined speed and power allow them to handle threats that no single hero could face alone, often racing to save the day.",
+    "superman-wonderwoman": "Superman and Wonder Woman are a powerhouse couple combining strength, courage, and heart to inspire the team and face cosmic threats.",
+    "flash-wonderwoman": "Flash and Wonder Woman bring speed and warrior prowess together, blending agility and combat skills for versatile teamwork."
+  };
+
+  // Create a key for the pair, alphabetically sorted to handle order
+  const pairKey = [hero1, hero2].sort().join("-");
+
+  if (combos[pairKey]) {
+    result.textContent = combos[pairKey];
+    result.style.color = "white";
+  } else {
+    result.textContent = "Compatibility info not available for this team-up.";
+    result.style.color = "gray";
+  }
+}
+
+document.getElementById("hero-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const heroName = document.getElementById("hero-name").value.trim();
+
+  if (heroName) {
+    // Get existing suggestions or start new
+    const savedHeroes = JSON.parse(localStorage.getItem("suggestedHeroes") || "[]");
+
+    // Add the new suggestion
+    savedHeroes.push(heroName);
+
+    // Save back to localStorage
+    localStorage.setItem("suggestedHeroes", JSON.stringify(savedHeroes));
+
+    // Confirmation message
+    document.getElementById("submit-response").textContent = "Thank you for submitting a hero!";
+    this.reset(); // Clear the form
+  }
+});
+document.querySelectorAll('.submit-btn').forEach(button => {
+  button.addEventListener('mouseover', () => {
+    button.style.backgroundColor = '#add8e6'; //  or any color
+  });
+  button.addEventListener('mouseout', () => {
+    button.style.backgroundColor = ''; // resets to original
+  });
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superman - The Justice League</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body class="superman-page"> <!-- Apply the 'superman-page' class to the body -->
+    <header class="header-text header-with-signal">
+        <h1>Superman - The Man of Steel</h1> <!-- Apply Superman's color scheme to the title -->
+	<div id="superman-signal" class="summon-signal" hidden>
+        <img src="images/superman-watch.jpg" alt="Superman Watch Signal" width="200">
+    </div>
+    </header>
+
+    <section class="content-container">
+        <div class="left-box">
+            <h2>Biography</h2>
+	<p>Superman, also known as Kal-El, is an alien from the planet Krypton who possesses superhuman abilities. As the last son of Krypton, he was sent to Earth by his parents before the destruction of his home planet. Raised by the Kents in Smallville, Clark learned the values of compassion, humility, and justice.  Superman’s dual identity as Clark Kent allows him to relate to humanity, even as he stands as Earth’s greatest protector. His unwavering sense of hope and justice makes him a beacon of inspiration for people around the world.</p>
+
+            <h3>Fun Facts</h3>
+            <ul>
+                <li>Superman’s alter ego, Clark Kent, works as a reporter for the Daily Planet.</li>
+                <li>He is vulnerable to Kryptonite, a mineral from his home planet.</li>
+            </ul>
+
+            <h2>Enemy List</h2>
+<div class="enemy-list">
+    <div class="enemy-card">
+        <img src="images/lexluthor.jpg" alt="Lex Luthor" class="enemy-image">
+        <div>
+            <h4>Lex Luthor</h4>
+            <p>Superman’s arch-nemesis, a genius billionaire with a vendetta against the Man of Steel.</p>
+        </div>
+    </div>
+
+    <div class="enemy-card">
+        <img src="images/brainiac.jpg" alt="Brainiac" class="enemy-image">
+        <div>
+            <h4>Brainiac</h4>
+            <p>A brilliant alien android who seeks to shrink cities and collect them, including Superman’s Metropolis.</p>
+        </div>
+    </div>
+
+    <div class="enemy-card">
+        <img src="images/generalzod.jpg" alt="General Zod" class="enemy-image">
+        <div>
+            <h4>General Zod</h4>
+            <p>A Kryptonian general with powers similar to Superman’s.</p>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+        <div class="right-box">
+
+            <img class="hero-image" src="images/superman.jpg" alt="Superman masked" width="300">
+
+<div class="button-container superman-theme">
+    <button class="toggle-mask" onclick="unmaskSuperman()">Reveal Identity</button>
+
+    <audio id="superman-theme-audio" src="audio/superman_theme.mp3" preload="auto"></audio>
+<button onclick="document.getElementById('superman-theme-audio').play()">Play Theme Song</button>
+
+    <button onclick="summonSuperman()">Summon Superman</button>
+
+    <button onclick="showSupermanQuote()">Show Random Quote</button>
+<p id="superman-quote-display">Click the button to see a Superman quote!</p>
+
+</div>
+
+            <h3>Abilities</h3>
+            <ul>
+                <li>Superhuman strength, speed, and durability</li>
+                <li>Heat vision, X-ray vision, and freeze breath</li>
+                <li>Flight and super agility</li>
+                <li>Invulnerability (except to Kryptonite)</li>
+            </ul>
+
+	<h3>Important Relationships</h3>
+	<ul>
+    	<li><strong>Jimmy Olsen</strong> – Jimmy is Superman’s close friend and photographer at the Daily Planet. Their friendship goes beyond professional ties, and Jimmy has been an ally in Superman’s most dangerous battles.</li>
+    	<li><strong>Lois Lane</strong> – Lois Lane, Superman’s love interest, and a key figure in his life. She represents everything Clark Kent holds dear about humanity and has stood by him through his challenges.</li>
+    	<li><strong>Supergirl (Kara Zor-El)</strong> – Kara Zor-El, Superman’s cousin, shares similar Kryptonian powers and has often been a valuable ally to Superman. Their family bond strengthens their teamwork in protecting Earth.</li>
+	</ul>       
+        </div>
+    </section>
+
+    <footer>
+        <p><a href="index.html">Back to the Home Page</a></p>
+        <p><a href="batman.html">Learn more about Batman</a></p>
+        <p><a href="wonderwoman.html">Learn more about Wonder Woman</a></p>
+	<p><a href="flash.html">Learn more about the Flash</a></p>
+        <p>Created by Andrew - 2025</p>
+    </footer>
+
+<script>
+function unmaskSuperman() {
+  document.querySelector('.hero-image').src = 'images/superman_unmasked.jpg';
+}
+
+function summonSuperman() {
+  document.getElementById('superman-signal').hidden = false;
+}
+const supermanQuotes = [
+  "Dreams save us. Dreams lift us up and transform us.",
+  "Hope is the light that shines in the darkest times.",
+  "You will give the people of Earth an ideal to strive towards.",
+  "The symbol of the House of El means hope."
+];
+
+function showSupermanQuote() {
+  const randomIndex = Math.floor(Math.random() * supermanQuotes.length);
+  const quote = supermanQuotes[randomIndex];
+  document.getElementById('superman-quote-display').textContent = quote;
+}
+
+</script>
+
+</body>
+</html>

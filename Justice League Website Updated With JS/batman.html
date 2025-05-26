@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batman - The Justice League</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body class="batman-page"> 
+    <header class="header-text header-with-signal">
+    <h1>Batman - The Dark Knight</h1>
+    <div id="batman-signal" class="summon-signal" hidden>
+        <img src="images/bat-signal.jpg" alt="Bat-Signal" width="1000">
+    </div>
+</header>
+
+    <section class="content-container">
+	<div class="left-box">
+        <h2>Biography</h2>
+        	<p>Batman, also known as the Dark Knight, is the alter ego of Bruce Wayne, a wealthy businessman from Gotham City. After witnessing the tragic murder of his parents as a child, Bruce dedicated his life to fighting crime and protecting Gotham. With no superpowers, Batman relies on his intellect, detective skills, and physical prowess to fight against villains.</p>
+	
+	<h3>Fun Facts</h3>
+<ul>
+    <li>Batman follows a strict no-kill code, believing that justice should be served without taking the lives of criminals.</li>
+    <li>He fights foes without superhuman powers, relying on his peak physical abilities, intellect, and an array of high-tech gadgets to defeat even the most dangerous enemies.</li>
+    <li>Known as "The World's Greatest Detective," Batman's investigative skills and deductive reasoning are unmatched, allowing him to solve crimes and outsmart even the most cunning of villains.</li>
+</ul>
+
+
+        <h2>Enemy List</h2>
+<div class="enemy-list">
+    <div class="enemy-card">
+        <img src="images/joker.jpg" alt="The Joker" class="enemy-image">
+        <div>
+            <h4>The Joker</h4>
+            <p>Batman’s archnemesis, a madman with a twisted sense of humor.</p>
+        </div>
+    </div>
+
+    <div class="enemy-card">
+        <img src="images/twoface.jpg" alt="Two-Face" class="enemy-image">
+        <div>
+            <h4>Two-Face</h4>
+            <p>A former district attorney turned villain with a dual personality.</p>
+        </div>
+    </div>
+
+    <div class="enemy-card">
+        <img src="images/penguin.jpg" alt="Penguin" class="enemy-image">
+        <div>
+            <h4>Penguin</h4>
+            <p>A crime lord known for his umbrella weapons and underworld dealings.</p>
+        </div>
+    </div>
+</div>
+
+
+	</div>
+
+	<div class="right-box">
+            
+        <img class="hero-image" src="images/batman.jpg" alt="Batman masked" width="300">
+
+    <div class="button-container">
+        <button class="toggle-mask" onclick="unmaskBatman()">Reveal Identity</button>
+
+        <audio id="batman-theme-audio" src="audio/batman_theme.mp3" preload="auto"></audio>
+<button onclick="document.getElementById('batman-theme-audio').play()">Play Theme Song</button>
+
+        <button onclick="summonBatman()">Summon Batman</button>
+
+        <button onclick="showBatmanQuote()">Show Random Quote</button>
+<p id="batman-quote-display">Click the button to see a Batman quote!</p>
+
+    </div>
+
+	<h3>Abilities</h3>
+        <ul>
+            <li>Master detective with unparalleled intellect</li>
+            <li>Expert in martial arts and hand-to-hand combat</li>
+            <li>Uses advanced technology and gadgets</li>
+            <li>Exceptional strategist and tactician</li>
+        </ul>
+
+	<h3>Important Relationships</h3>
+<ul>
+    <li><strong>Alfred Pennyworth</strong> – Alfred is more than just a butler. He’s a father figure to Bruce Wayne, offering wisdom, emotional support, and care. Their bond is unbreakable, and Alfred’s role in Bruce’s life is irreplaceable.</li>
+    <li><strong>Robin (Dick Grayson)</strong> – Dick Grayson, the first Robin, shares a special bond with Batman. Taken in after the death of his parents, Dick became Bruce’s ward and partner in crime-fighting. As Robin, he was Batman’s right hand until he eventually became Nightwing.</li>
+    <li><strong>Batgirl (Barbara Gordon)</strong> – Batgirl, aka Barbara Gordon, is one of Batman’s most trusted allies. She’s a skilled fighter and detective, with a close working relationship with Batman in Gotham City. Her intelligence and fighting skills make her an invaluable member of the Bat-family.</li>
+</ul>
+
+
+        
+	</div>
+</section>
+
+    <footer>
+	<p><a href="index.html">Back to the Home Page</a></p>
+        <p><a href="wonderwoman.html">Learn more about Wonder Woman</a></p>
+        <p><a href="superman.html">Learn more about Superman</a></p>
+	<p><a href="flash.html">Learn more about the Flash</a></p>
+        <p>Created by Andrew - 2025</p>
+    </footer>
+
+<script>
+function unmaskBatman() {
+  document.querySelector('.hero-image').src = 'images/batman_unmasked.jpg';
+}
+
+function summonBatman() {
+  document.getElementById('batman-signal').hidden = false;
+}
+const batmanQuotes = [
+  "I’m whatever Gotham needs me to be.",
+  "It's not who I am underneath, but what I do that defines me.",
+  "The night is darkest just before the dawn.",
+  "Sometimes the truth isn’t good enough, sometimes people deserve more."
+];
+
+function showBatmanQuote() {
+  const randomIndex = Math.floor(Math.random() * batmanQuotes.length);
+  const quote = batmanQuotes[randomIndex];
+  document.getElementById('batman-quote-display').textContent = quote;
+}
+
+</script>
+
+</body>
+</html>
