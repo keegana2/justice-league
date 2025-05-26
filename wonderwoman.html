@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonder Woman - The Justice League</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body class="wonderwoman-page"> 
+    <header class="header-text header-with-signal">
+        <h1>Wonder Woman - The Amazon Princess</h1> 
+	<div id="wonderwoman-signal" class="summon-signal" hidden>
+        <img src="images/lasso-glow.jpg" alt="Lasso Glow Signal" width="1000">
+    </div>
+    </header>
+
+    <section class="content-container">
+        <div class="left-box">
+            <h2>Biography</h2>
+            <p>Wonder Woman, also known as Diana Prince, is an Amazonian warrior princess from the hidden island of Themyscira. She was sculpted from clay by her mother, Queen Hippolyta, and granted life by the gods of Olympus. Armed with magical weapons and equipped with unmatched combat skills, Diana fights for justice and peace, both on Earth and beyond.</p>
+
+            <h3>Fun Facts</h3>
+            <ul>
+                <li>Her Lasso of Truth forces anyone caught by it to tell the truth.</li>
+                <li>Wonder Woman is a founding member of the Justice League and has often served as its ambassador.</li>
+                <li>Thanks to her divine gifts, Wonder Woman can understand and speak all human languages.</li>
+            </ul>
+
+<h2>Enemy List</h2>
+<div class="enemy-list">
+    <div class="enemy-card">
+        <img src="images/cheetah.jpg" alt="Cheetah" class="enemy-image">
+        <div>
+            <h4>Cheetah</h4>
+            <p>A fierce rival with superhuman speed and strength.</p>
+        </div>
+    </div>
+
+    <div class="enemy-card">
+        <img src="images/ares.jpg" alt="Ares" class="enemy-image">
+        <div>
+            <h4>Ares</h4>
+            <p>The God of War who thrives on conflict and opposes Diana’s mission of peace.</p>
+        </div>
+    </div>
+
+    <div class="enemy-card">
+        <img src="images/circe.jpg" alt="Circe" class="enemy-image">
+        <div>
+            <h4>Circe</h4>
+            <p>A powerful sorceress who uses magic to challenge Wonder Woman.</p>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+        <div class="right-box">
+        
+            <img class="hero-image" src="images/wonderwoman.jpg" alt="Wonder Woman masked" width="300">
+
+<div class="button-container wonderwoman-theme">
+    <button class="toggle-mask" onclick="unmaskWonderWoman()">Reveal Identity</button>
+
+    <audio id="wonderwoman-theme-audio" src="audio/wonderwoman_theme.mp3" preload="auto"></audio>
+<button onclick="document.getElementById('wonderwoman-theme-audio').play()">Play Theme Song</button>
+
+    <button onclick="summonWonderWoman()">Summon Wonder Woman</button>
+
+    <button onclick="showWonderWomanQuote()">Show Random Quote</button>
+<p id="wonderwoman-quote-display">Click the button to see a Wonder Woman quote!</p>
+
+</div>
+    
+	<h3>Abilities</h3>
+            <ul>
+                <li>Superhuman strength, speed, and agility</li>
+                <li>Master of hand-to-hand combat and strategy</li>
+                <li>Immortality (as an Amazonian)</li>
+                <li>Magical weapons, including the Lasso of Truth and indestructible bracelets</li>
+                <li>Flight (with the help of her invisible jet)</li>
+            </ul>
+	<h3>Important Relationships</h3>
+	<ul>
+    		<li><strong>Steve Trevor</strong> – Steve Trevor is Wonder Woman's long-time love interest and an important figure in her journey. His experiences with Diana have helped shape both their lives and their shared mission for justice.</li>
+    		<li><strong>Hippolyta</strong> – Queen Hippolyta, Wonder Woman's mother, plays an essential role in shaping Diana's values and her sense of justice. Their relationship is one of respect and love, with Hippolyta’s wisdom guiding Diana’s decisions.</li>
+    		<li><strong>Donna Troy (Troia)</strong> – Donna Troy, once Wonder Woman’s sidekick, is her close ally and sometimes partner in battle. Donna represents the strength of the Amazons alongside Diana and has had her own hero’s journey.</li>
+	</ul>
+
+            
+        </div>
+    </section>
+
+    <footer>
+        <p><a href="index.html">Back to the Home Page</a></p>
+        <p><a href="batman.html">Learn more about Batman</a></p>
+        <p><a href="superman.html">Learn more about Superman</a></p>
+	<p><a href="flash.html">Learn more about the Flash</a></p>
+        <p>Created by Andrew - 2025</p>
+    </footer>
+
+<script>
+function unmaskWonderWoman() {
+  document.querySelector('.hero-image').src = 'images/wonderwoman_unmasked.jpg';
+}
+
+function summonWonderWoman() {
+  document.getElementById('wonderwoman-signal').hidden = false;
+}
+const wonderWomanQuotes = [
+  "I will fight for those who cannot fight for themselves.",
+  "Only love can truly save the world.",
+  "I am Diana of Themyscira, daughter of Hippolyta.",
+  "In a world of ordinary mortals, you are a wonder woman."
+];
+
+function showWonderWomanQuote() {
+  const randomIndex = Math.floor(Math.random() * wonderWomanQuotes.length);
+  const quote = wonderWomanQuotes[randomIndex];
+  document.getElementById('wonderwoman-quote-display').textContent = quote;
+}
+
+</script>
+
+</body>
+</html>

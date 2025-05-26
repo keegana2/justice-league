@@ -1,0 +1,168 @@
+/* ======= Full Page Classes (Set background + text color together) ======= */
+.index-page {
+    background-color: #f59e0b; /* warm sunlight orange */
+    color: white;
+}
+
+.batman-page {
+    background-color: #1c1c1c; /* dark grey */
+    color: yellow;
+    border-color: yellow;
+    text-shadow: 2px 2px black;
+}
+
+.wonderwoman-page {
+    background-color: #235789; /* Wonder Woman dark blue */
+    color: yellow;
+    border-color: yellow;
+    text-shadow: 2px 2px red;
+}
+
+.superman-page {
+    background-color: #0033a0; /* Superman blue */
+    color: #f1c40f;
+    border-color: #f1c40f;
+    text-shadow: 2px 2px navy;
+}
+
+.flash-page {
+    background-color: #ffcc00; /* Flash golden yellow */
+    color: red;
+    border-color: #f1c40f;
+    text-shadow: 2px 2px yellow;
+}
+
+/* ======= Text Formatting ======= */
+.title-text {
+    font-family: sans-serif;
+    font-size: 48px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.header-text {
+    font-family: sans-serif;
+    font-size: 32px;
+    text-align: center;
+    margin: 20px 10px;
+}
+
+.paragraph-text {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin: 15px 20px;
+}
+
+/* ======= Image Formatting ======= */
+.centered-image {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* ======= Hero Links ======= */
+.hero-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.hero-links li {
+    margin: 0;
+}
+
+.hero-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hero-links a:hover {
+    background-color: black;
+    color: white;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 80%; /* Set the width of the container */
+    max-width: 1000px; 
+    margin: 0 auto; 
+}
+
+.left-box {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.right-box {
+    flex: 1;
+    text-align: center;
+    border: 3px solid; 
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.enemy-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.enemy-card {
+    display: flex;
+    align-items: center;
+    border: 3px solid;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: inherit;
+    color: inherit;
+}
+
+.enemy-image {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.summon-signal {
+  /* This will be overridden by the hidden attribute initially */
+}
+
+.summon-signal img {
+  display: inline; /* Avoid inline image spacing issues */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+/* ======= Footer ======= */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+}
+
